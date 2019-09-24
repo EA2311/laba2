@@ -1,0 +1,28 @@
+package com.company;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Cart stack1 = new Cart(10);
+        Item book1 = new Item("asd", 10.5f);
+        Item book2 = new Item("ads", 10);
+        Item book3 = new Item("das", 5.5f);
+        Item book4 = new Item("dsa", 11);
+        Item book5 = new Item("sad", 12.3f);
+        stack1.Push( book1);
+        stack1.Push( book2);
+        stack1.Push( book3);
+        stack1.Push( book4);
+        stack1.Push( book5);
+        System.out.print("The sum of the values of all items:");
+        System.out.println(stack1.Sum());
+        System.out.print("The sum of the values of all items after up for 15%:");
+        stack1.upAllValue(15);
+        System.out.println(stack1.Sum());
+        System.out.print("The sum of the values of all items after down for 30%:");
+        stack1.decAllValue(30);
+        System.out.println(stack1.Sum());
+
+    }
+}
